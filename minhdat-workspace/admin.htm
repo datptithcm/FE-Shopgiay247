@@ -41,29 +41,61 @@
                     </li>
                     <li class="nav-item">
                         <i class="nav-item-icon fa-solid fa-chart-line"></i>
-                        Thống kê
+                        Doanh thu
                     </li>
                 </ul>
                 <ul class="nav nav-right">
-                    <div class="sign-out">
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <div class="messenger">
+                        <i class="fa-brands fa-facebook-messenger"></i>
                     </div>
+                    <div class="user"></div>
                 </ul>
             </nav>
         </header>
         <div class="content">
             <div class="container-fluid pt-2">
                 <div class="row">
-                    <div class="col-md-3 side-bar">
-                        <div class="product-quantity">
-                            <span></span>
+                    <div class="col-md-6 side-bar">
+                        <div class="product-dashboard">
+                            <div class="dashboard-heading">
+                                <span class="dashboard-heading-icon">
+                                    <i class="fa-brands fa-product-hunt"></i>
+                                </span>
+                                <span class="dashboard-heading-title">Tổng sản phẩm</span>
+                            </div>
+                            <div class="product-number">1236</div>
                         </div>
-                        <div class="product-quantity">
-                            <span class="number">1000</span>
+                        <div class="product-dashboard">
+                            <div class="dashboard-heading">
+                                <span class="dashboard-heading-icon">
+                                    <i class="fa-brands fa-product-hunt"></i>
+                                </span>
+                                <span class="dashboard-heading-title">Tổng sản phẩm hết hàng</span>
+                            </div>
+                            <div class="product-number">1236</div>
+                        </div>
+                        <div class="product-dashboard">
+                            <div class="dashboard-heading">
+                                <span class="dashboard-heading-icon">
+                                    <i class="fa-brands fa-product-hunt"></i>
+                                </span>
+                                <span class="dashboard-heading-title">Tổng sản phẩm</span>
+                            </div>
+                            <div class="product-number">1236</div>
+                        </div>
+                        <div class="product-dashboard">
+                            <div class="dashboard-heading">
+                                <span class="dashboard-heading-icon">
+                                    <i class="fa-brands fa-product-hunt"></i>
+                                </span>
+                                <span class="dashboard-heading-title">Tổng sản phẩm hết hàng</span>
+                            </div>
+                            <div class="product-number">1236</div>
                         </div>
                     </div>
+                    </div>
                 
-                    <div class="col-md-9">
+                    <div class="col-md-6">
                 
                     </div>
                 </div>
@@ -74,6 +106,24 @@
         
         </footer>
     </div>
+
+    <script>
+        $(document).ready(function() {
+            const quantity = 10000
+            for (let i = 0; i <= quantity; ++i) {
+                setTimeout(function() {
+                    $('.product-number').text(i)
+                }, 20)
+                
+                if (i > 5000) {
+                    setTimeout(function() {
+                        $('.product-number').text(quantity)
+                    }, 20)
+                    break
+                }
+            }
+        }) 
+    </script>
     
 </body>
 </html>
